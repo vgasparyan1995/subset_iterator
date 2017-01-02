@@ -12,7 +12,8 @@ void print(std::vector<int>&& subset)
 
 int main()
 {
-    std::subset_iterator<int> iter{1, 2, 3, 4, 5};
+    std::vector<double> zrlam{ 1, 2, 3, 4, 5 };
+    std::subset_iterator<int> iter(zrlam.begin(), zrlam.end());
     while (!iter.is_end()) {
         print(*iter);
         ++iter;
